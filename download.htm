@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cretnastone Marmoraria</title>
+    <link rel="stylesheet" href="styles.css">
+<script defer data-domain="chocolate-donni-67.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script><script type="text/javascript" src="https://tiiny.host/ad-script.js"></script></head>
+
+<body>
+    <header>
+        <h1>Cretnastone Marmoraria</h1>
+        <nav>
+            <a href="#produtos">Produtos</a>
+            <a href="#layout">Layouts</a>
+            <a href="#cotacao">Cotação</a>
+            <a href="#projetos">Projetos</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Excelência em Mármore, Granito e Quartzo</h2>
+        <p>Transformando ambientes com qualidade e sofisticação.</p>
+    </section>
+
+    <section id="produtos">
+        <h2>Nossos Produtos</h2>
+        <div class="grid">
+            <div class="card">Mármore Carrara</div>
+            <div class="card">Granito Preto São Gabriel</div>
+            <div class="card">Quartzo Branco Prime</div>
+            <div class="card">Travertino</div>
+        </div>
+    </section>
+
+    <section id="layout">
+        <h2>Escolha o Layout da Bancada</h2>
+        <select id="layoutSelect">
+            <option value="Reta">Reta</option>
+            <option value="Em L">Em L</option>
+            <option value="Em U">Em U</option>
+            <option value="Ilha">Ilha</option>
+        </select>
+
+        <div id="previewLayout"></div>
+    </section>
+
+    <section id="cotacao">
+        <h2>Solicitar Cotação</h2>
+        <form id="formCotacao">
+            <input type="text" id="nome" placeholder="Seu nome" required>
+            <input type="email" id="email" placeholder="Seu e-mail" required>
+            <input type="text" id="telefone" placeholder="Seu telefone" required>
+
+            <label>Material:</label>
+            <select id="material">
+                <option>Mármore</option>
+                <option>Granito</option>
+                <option>Quartzo</option>
+            </select>
+
+            <label>Metragem (m²):</label>
+            <input type="number" id="metragem" min="1" required>
+
+            <label>Layout escolhido:</label>
+            <input type="text" id="layoutEscolhido" readonly>
+
+            <button type="submit">Enviar Cotação</button>
+        </form>
+
+        <p id="msgCotacao"></p>
+    </section>
+
+    <section id="projetos">
+        <h2>Acompanhar Projeto</h2>
+        <input type="text" id="codigoProjeto" placeholder="Código do projeto">
+        <button onclick="buscarProjeto()">Consultar</button>
+
+        <div id="statusProjeto"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
